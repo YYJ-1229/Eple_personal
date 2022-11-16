@@ -1,10 +1,10 @@
 node {
     def app
     stage('Clone repository') {
-        git 'https://github.com/YYJ-1229/Eple_personal/.git'
+        git 'https://github.com/jwpark-sungshin/fork_vs_vfork.git'
     }
     stage('Build image') {
-        app = docker.build("yangdori/test")
+        app = docker.build("pjbear/prbasedtest")
     }
     stage('Test image') {
         app.inside {
